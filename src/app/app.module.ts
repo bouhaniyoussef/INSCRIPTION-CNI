@@ -1,15 +1,11 @@
+import { ContactComponent } from './components/contact/contact.component';
+import { MaterialModule } from './shared/material/material.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
-import {TokenInterceptorService} from "./services/auth/token-interceptor.service";
-import {ErrorInterceptorService} from "./services/auth/error-interceptor.service";
-import { ProfileComponent } from './components/profile/profile.component';
-import { MaterialModule } from './shared/material/material.module';
-import { AdminModule } from './admin/admin.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilesModule } from './shared/files/files.module';
 import { HomeComponent } from './components/home/home.component';
@@ -49,6 +45,7 @@ import {
 
 
 } from "ngx-bootstrap/popover";
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -61,17 +58,16 @@ import {
     ApplicationErrorComponent,
     PageNotFoundComponent,
     ResourceNotFoundComponent,
-    ProfileComponent
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule,
-    AdminModule,
     FormsModule,
     ReactiveFormsModule,
     FilesModule,
+    MaterialModule,
     HttpClientModule,
     CarouselModule.forRoot(),
     TooltipModule.forRoot(),
@@ -81,16 +77,7 @@ import {
     PaginationModule.forRoot(),
   ],
   providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: TokenInterceptorService,
-      multi: true
-    },
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: ErrorInterceptorService,
-      multi: true
-    },
+
   ],
   bootstrap: [AppComponent]
 })

@@ -9,12 +9,13 @@ import { BsModalService } from "ngx-bootstrap/modal";
 })
 export class ResourceNotFoundComponent implements OnInit {
 
-  @ViewChild('notFoundTemplate', {static: true}) notFoundTemplate: TemplateRef<any>;
+  @ViewChild('notFoundTemplate', { static: true })
+  notFoundTemplate!: TemplateRef<any>;
 
   constructor(private modalService: BsModalService) {
   }
 
-  modalRef: BsModalRef;
+  modalRef: BsModalRef = new BsModalRef;
 
   ngOnInit(): void {
     this.modalRef = this.modalService.show(this.notFoundTemplate);

@@ -8,12 +8,13 @@ import { BsModalService } from "ngx-bootstrap/modal";
   styleUrls: ['./application-error.component.css']
 })
 export class ApplicationErrorComponent implements OnInit {
-  @ViewChild('errorTemplate', {static: true}) errorTemplate: TemplateRef<any>;
+  @ViewChild('errorTemplate', { static: true })
+  errorTemplate!: TemplateRef<any>;
 
   constructor(private modalService: BsModalService) {
   }
 
-  modalRef: BsModalRef;
+  modalRef!: BsModalRef;
 
   ngOnInit(): void {
     this.modalRef = this.modalService.show(this.errorTemplate);
