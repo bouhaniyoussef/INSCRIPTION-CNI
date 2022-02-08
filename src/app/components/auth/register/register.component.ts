@@ -9,7 +9,7 @@ import {Router} from "@angular/router";
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  registrationForm: FormGroup;
+  registrationForm!: FormGroup;
 
   constructor(
     private fb: FormBuilder,
@@ -18,13 +18,7 @@ export class RegisterComponent implements OnInit {
   ) {
   }
 
-  get userName() {
-    return this.registrationForm.get("authCredentialsDto").get("username");
-  }
 
-  get password() {
-    return this.registrationForm.get("authCredentialsDto").get("password");
-  }
 
   ngOnInit() {
     if (this.authService.isLoggedIn()) {
@@ -51,26 +45,10 @@ export class RegisterComponent implements OnInit {
 
   register() {
     const userCredentials = {
-      username: this.userName.value,
-      password: this.password.value
+
     };
     this.authService
-      .registerUser(this.registrationForm.value)
-      .subscribe(() => {
-        this.authService.login(userCredentials).subscribe(
-          resToken => {
-            localStorage.setItem("token", resToken.accessToken);
-            this.authService.prepareUserData();
-            this.authService.getCurrentUser().subscribe(
-              resUser => {
-                this.authService.currentUser = resUser;
-              }
-            );
-            this.router.navigate([`/home`]);
-          },
-          error => console.log(error)
-        );
-      });
+
 
   }
 

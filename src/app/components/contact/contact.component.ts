@@ -1,6 +1,7 @@
 import {Component, OnInit, TemplateRef} from '@angular/core';
 import {AuthService} from "../../services/auth/auth.service";
-import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import { FormControl } from'@angular/forms';
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {MatDialog} from "@angular/material/dialog";
 
@@ -10,8 +11,10 @@ import {MatDialog} from "@angular/material/dialog";
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  createContactDto!: FormGroup ;
 
-  createContactDto: FormGroup;
+
+
 
   constructor(private authService: AuthService,
               private fb: FormBuilder,
@@ -39,11 +42,7 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(template: TemplateRef<any>) {
-    this.authService.messageContact(this.createContactDto.value)
-      .subscribe(() => {
-        this.openSnackBar('Message Sent Successfully!', 'OK');
-        this.openDialog(template);
-      })
+    this.authService.messageContact()
   }
 
   openSnackBar(message: string, action: string) {
