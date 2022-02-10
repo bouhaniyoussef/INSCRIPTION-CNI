@@ -1,0 +1,90 @@
+{
+ "users":  [
+    {
+      "firstName": "youssef",
+      "lastName": "bouhani",
+      "age":24,
+      "gender":"Homme",
+      "phone":28556554,
+      "city":"Rades",
+      "country":"Tunis",
+      "email": "youssefbouha@gmail.com",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "firstName": "ahmed",
+      "lastName": "ahmed",
+      "age":24,
+      "gender":"Homme",
+      "phone":28556554,
+      "city":"Rades",
+      "country":"Tunis",
+      "email": "ahmedhad12@gmail.com",
+      "password": "4321",
+      "id": 2
+    },
+    {
+      "firstName": "Chiheb",
+      "lastName": "Brahim",
+      "age":24,
+      "gender":"Homme",
+      "phone":28556554,
+      "city":"Rades",
+      "country":"Tunis",
+      "email": "chihebbeghil91@gmail.com",
+      "password": "3333",
+      "id": 3
+    },
+    {
+      "firstName": "Eyette",
+      "lastName": "Khriss",
+      "age":24,
+      "gender":"Homme",
+      "phone":28556554,
+      "city":"Rades",
+      "country":"Tunis",
+      "email": "lprincesse@ymail.com",
+      "password": "5555",
+      "id": 4
+    },
+    {
+      "firstName": "Khalil",
+      "lastName": "Bouzid",
+      "age":24,
+      "gender":"Homme",
+      "phone":28556554,
+      "city":"Rades",
+      "country":"Tunis",
+      "email": "kbouziditn@gmail.com",
+      "password": "4444",
+      "id": 5
+    },
+    {
+      "firstName": "user",
+      "lastName": "user",
+      "age":24,
+      "gender":"Homme",
+      "phone":28556554,
+      "city":"Rades",
+      "country":"Tunis",
+      "email": "user@test.com",
+      "password": "test",
+
+      "id": 6
+    },
+    {
+      "firstName": "user2",
+      "email": "user2@test.com",
+      "age":24,
+      "gender":"Homme",
+      "phone":28556554,
+      "city":"Rades",
+      "country":"Tunis",
+      "password": "test",
+      "lastName": "user2",
+      "id": 7
+    }
+  ]
+
+}
