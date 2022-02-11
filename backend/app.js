@@ -1,9 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
-const ficheRouter = require('./routes/fiches');
+const stagerRouter = require('./routes/stagers');
 const userRouter = require('./routes/users');
-
 const app = express();
 
 mongoose.connect('mongodb://localhost:27017/cni-2021',
@@ -21,7 +20,7 @@ mongoose.connect('mongodb://localhost:27017/cni-2021',
   next();
 });
 
-app.use('/api/fiche', ficheRouter);
+app.use('/api/stagers', stagerRouter);
 app.use('/api/auth', userRouter);
 
 module.exports = app;
