@@ -9,8 +9,7 @@
       "city":"Rades",
       "country":"Tunis",
       "email": "youssefbouha@gmail.com",
-      "password": "1234",
-      "id": 1
+      "password": "1234"
     },
     {
       "firstName": "ahmed",
@@ -21,8 +20,7 @@
       "city":"Rades",
       "country":"Tunis",
       "email": "ahmedhad12@gmail.com",
-      "password": "4321",
-      "id": 2
+      "password": "4321"
     },
     {
       "firstName": "Chiheb",
@@ -33,8 +31,7 @@
       "city":"Rades",
       "country":"Tunis",
       "email": "chihebbeghil91@gmail.com",
-      "password": "3333",
-      "id": 3
+      "password": "3333"
     },
     {
       "firstName": "Eyette",
@@ -45,8 +42,7 @@
       "city":"Rades",
       "country":"Tunis",
       "email": "lprincesse@ymail.com",
-      "password": "5555",
-      "id": 4
+      "password": "5555"
     },
     {
       "firstName": "Khalil",
@@ -57,8 +53,7 @@
       "city":"Rades",
       "country":"Tunis",
       "email": "kbouziditn@gmail.com",
-      "password": "4444",
-      "id": 5
+      "password": "4444"
     },
     {
       "firstName": "user",
@@ -69,9 +64,7 @@
       "city":"Rades",
       "country":"Tunis",
       "email": "user@test.com",
-      "password": "test",
-
-      "id": 6
+      "password": "test"
     },
     {
       "firstName": "user2",
@@ -82,8 +75,7 @@
       "city":"Rades",
       "country":"Tunis",
       "password": "test",
-      "lastName": "user2",
-      "id": 7
+      "lastName": "user2"
     }
   ]
 
