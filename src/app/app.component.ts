@@ -9,13 +9,13 @@ import { AuthService } from './services/auth/auth.service';
 export class AppComponent {
   title = 'INSCRIPTION-CNI';
   constructor(public authService: AuthService) {
-
+    // authService.prepareUserData();
+    // authService.refreshInfo();
 }
 
 
-
 ngOnInit(): void {
-
+  // this.authService.refreshInfo();
 
 }
 }

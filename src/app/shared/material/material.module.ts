@@ -46,6 +46,8 @@ import { MatChipsModule } from '@angular/material/chips';
 
 import { MatCardModule } from '@angular/material/card';
 
+
+
 const MaterialComponents = [
   MatButtonModule,
   MatIconModule,
@@ -60,7 +62,7 @@ const MaterialComponents = [
   MatDividerModule,
   MatGridListModule,
   MatExpansionModule,
-  MatBadgeModule,
+  MatCardModule,
   MatStepperModule,
   MatFormFieldModule,
   MatInputModule,
@@ -93,6 +95,7 @@ const MaterialComponents = [
   MatDividerModule,
   MatExpansionModule,
   MatGridListModule,
+  MatIconModule,
   MatInputModule,
   MatListModule,
   MatMenuModule,
@@ -114,7 +117,7 @@ const MaterialComponents = [
   MatTooltipModule,
   MatTreeModule,
   PortalModule,
-  ScrollingModule
+  ScrollingModule,
 ];
 
 @NgModule({

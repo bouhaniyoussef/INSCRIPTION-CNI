@@ -42,7 +42,7 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(template: TemplateRef<any>) {
-    this.authService.messageContact()
+    // this.authService.messageContact()
   }
 
   openSnackBar(message: string, action: string) {

@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
 
 
   constructor(public authService: AuthService) {
-    this.authService.refreshInfo();
+    // this.authService.refreshInfo();
   }
 
   ngOnInit(): void {

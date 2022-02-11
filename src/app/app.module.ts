@@ -19,32 +19,14 @@ import { ResourceNotFoundComponent } from './shared/resource-not-found/resource-
 
 
 import {
-  AccordionModule
-
-} from "ngx-bootstrap/accordion";
-import {
+  AccordionModule,
   CarouselModule,
-
-} from "ngx-bootstrap/carousel";
-import {
   ModalModule,
-
-
-} from "ngx-bootstrap/modal";
-import {
   PaginationModule,
-
-
-} from "ngx-bootstrap/pagination";
-import {
-
-  TooltipModule
-} from "ngx-bootstrap/tooltip";
-import {
   PopoverModule,
+  TooltipModule
+} from "ngx-bootstrap";
 
-
-} from "ngx-bootstrap/popover";
 import { HttpClientModule } from '@angular/common/http';
 
 

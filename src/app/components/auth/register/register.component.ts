@@ -9,47 +9,37 @@ import {Router} from "@angular/router";
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  registrationForm!: FormGroup;
+  public registerForm: FormGroup;
 
   constructor(
-    private fb: FormBuilder,
-    private authService: AuthService,
-    private router: Router
+    public formBuilder: FormBuilder,
+    public authService: AuthService,
+    public router: Router
   ) {
-  }
-
-
-
-  ngOnInit() {
-    if (this.authService.isLoggedIn()) {
-      this.router.navigate(['/home']);
-    }
-    this.registrationForm = this.fb.group({
-      authCredentialsDto: new FormGroup({
-        username: new FormControl(null, Validators.required),
-        password: new FormControl(null)
-      }),
-      createProfileDto: new FormGroup({
-        firstname: new FormControl(null, Validators.required),
-        lastname: new FormControl(null, Validators.required),
-        email: new FormControl(null, Validators.required),
-        gender: new FormControl(null, Validators.required),
-        age: new FormControl(null, Validators.required),
-        phone: new FormControl(null, Validators.required),
-        country: new FormControl(null, Validators.required),
-        city: new FormControl(null, Validators.required),
-        address: new FormControl(null, Validators.required),
-      })
+    this.registerForm = this.formBuilder.group({
+      firstname: [''],
+      lastname: [''],
+      age: [''],
+      gender: [''],
+      Country: [''],
+      city: [''],
+      address: [''],
+      phone: [''],
+      Email: [''],
+      password: [''],
     });
+   }
+
+  ngOnInit(): void {
   }
 
-  register() {
-    const userCredentials = {
-
-    };
-    this.authService
-
-
+  signupUser() {
+    this.authService.signup(this.registerForm.value).subscribe(res => {
+      if(res.status == 201) {
+        this.registerForm.reset();
+        this.router.navigate(['/auth/login']);
+      }
+    });
   }
 
 }
