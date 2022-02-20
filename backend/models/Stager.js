@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const { DateFormatter } = require('ngx-bootstrap');
 
 const stagerSchema = new mongoose.Schema({
   nom:      {type: String, required: true},

@@ -1,0 +1,268 @@
+<!-- <div class="register">
+  <div class="row">
+    <div class="col-md-3 register-left">
+      <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+      <h3>Welcome</h3>
+    </div>
+    <mat-stepper class="col-md-9 register-right p-4">
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="home-tab">
+          <mat-step>
+            <h3>Enter Profile Information</h3>
+            <div class="row register-form">
+              <form [formGroup]="formulairForm" (ngSubmit)="formulaire()" novalidate>
+                <div class="d-flex justify-content-center mt-2">
+                  <mat-form-field style="width: 300px" class="ml-3">
+
+                  </mat-form-field>
+                  <mat-form-field style="width: 300px" class="ml-3">
+
+                  </mat-form-field>
+                </div>
+                <div class="d-flex justify-content-center mt-3">
+                  <mat-form-field style="width: 200px" class="ml-2">
+
+                  </mat-form-field>
+
+                  <mat-form-field style="width: 200px" class="ml-2">
+
+                  </mat-form-field>
+                </div>
+                <div class="d-flex justify-content-center mt-3">
+
+
+
+                </div>
+              </form>
+            </div>
+          </mat-step>
+          <mat-step>
+            <h3>Enter Profile Information</h3>
+            <div class="row register-form">
+              <form [formGroup]="formulairForm" (ngSubmit)="formulaire()" novalidate>
+                <div class="d-flex justify-content-center mt-2">
+                  <mat-form-field style="width: 300px" class="ml-3">
+                    <input type="text" id="etab" formControlName="etab" matInput aria-label="Etablissement"
+                      placeholder="Etablissement" required />
+                  </mat-form-field>
+                  <mat-form-field style="width: 300px" class="ml-3">
+                    <input type="text" id="org" matInput aria-label="Organisme d'accueil"
+                      placeholder="Organisme d'accueil" required />
+                  </mat-form-field>
+                </div>
+                <div class="d-flex justify-content-center mt-2">
+                  <mat-form-field style="width: 300px" class="ml-3">
+                    <input type="text" id="sujet" formControlName="sujet" matInput aria-label="Sujet du stage"
+                      placeholder="Sujet du stage" required />
+                  </mat-form-field>
+                  <mat-form-field style="width: 300px" class="ml-3">
+                    <input type="zone" id="typstage" placeholder="Type du stage" formControlName="typstage" matInput
+                      aria-label="Type du stage" required />
+                  </mat-form-field>
+                </div>
+
+
+                <div class="d-flex justify-content-center mt-3">
+                  <button matStepperPrevious  mat-flat-button color="primary">Back</button>
+
+
+
+                  </div>
+
+              </form>
+            </div>
+          </mat-step>
+
+          <mat-step>
+            <h3>Enter Profile Information</h3>
+            <div class="row register-form">
+              <form [formGroup]="formulairForm" (ngSubmit)="formulaire()" novalidate>
+                <div class="d-flex justify-content-center mt-2">
+                  <mat-form-field style="width: 300px" class="ml-3">
+                    <input type="date" id="datedeb" formControlName="datedeb" matInput aria-label="Péride du stage du "
+                      placeholder="Péride du stage du " required />
+                  </mat-form-field>
+                  <mat-form-field style="width: 300px" class="ml-3">
+                    <input type="date" id="datefin" formControlName="datefin" matInput aria-label="Au" placeholder="Au"
+                      required />
+                  </mat-form-field>
+
+
+
+                </div>
+                <div class="d-flex justify-content-center mt-2">
+                  <mat-form-field style="width: 300px" class="ml-3">
+                    <input type="date" id="datefin" formControlName="datefin" matInput aria-label="Au" placeholder="Au"
+                    required />
+                  </mat-form-field>
+                  <mat-form-field style="width: 300px" class="ml-3">
+                    <input type="date" id="datefin" formControlName="datefin" matInput aria-label="Au" placeholder="Au"
+                    required />
+                  </mat-form-field>
+                </div>
+                <div class="d-flex justify-content-center mt-2">
+                    <mat-checkbox  style="width: 10px" class="example-disabled-checkbox  ml-3" [(ngModel)]="pay">Non</mat-checkbox>
+                </div>
+                    <div class="d-flex justify-content-right mt-2">
+
+                  <mat-checkbox style="width: 10px" class="example-disabled-checkbox  ml-3" [(ngModel)]="pay">Oui</mat-checkbox>
+                </div>
+                <div class="d-flex justify-content-center mt-3">
+                <button [disabled]="!formulairForm.valid" style="width: 100px" p-3 class="ml-lg-3" class="btn btn-primary btnform" type="submit">
+                  Register
+                </button>
+                </div>
+              </form>
+            </div>
+          </mat-step>
+        </div>
+      </div>
+
+  </mat-stepper>
+</div>
+</div> -->
+
+<div class="page-content">
+  <div class="form-v1-content">
+    <mat-stepper class="wizard-form">
+
+
+          <!-- SECTION 1 -->
+
+          <mat-step>
+            <div class="inner">
+              <div class="wizard-header">
+                <h3 class="heading">Peronal Infomation</h3>
+              </div>
+              <div class="form-row">
+                <div class="form-holder form-holder-1">
+                  <mat-form-field>
+                    <input id="nom" formControlName="nom" aria-label="Nom et Prénom" type="text" matInput
+                      placeholder="Nom et Prénom" required />
+                  </mat-form-field>
+                </div>
+                <div class="form-holder form-holder-1">
+                  <mat-form-field>
+                    <input type="text" id="cin" formControlName="cin" matInput placeholder="CIN" aria-label="CIN"
+                      required />
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-holder">
+                  <mat-form-field>
+                    <input type="text" name="niv" id="niv" matInput  formControlName="niv"
+                      placeholder="Niveau d'Etude" aria-label="Niveau d'Etude" required>
+                  </mat-form-field>
+
+                </div>
+                <!-- <div class="form-holder">
+                  <mat-form-field>
+                    <input type="number" id="tel" aria-label="Tél" formControlName="tel" matInput placeholder="Tél"
+                    required />
+                  </mat-form-field>
+                </div> -->
+              </div>
+
+
+
+            </div>
+          </mat-step>
+          <!-- SECTION 2 -->
+          <h2>
+            <p class="step-icon"><span>02</span></p>
+            <span class="step-text">Connect Bank Account</span>
+          </h2>
+          <mat-step>
+            <div class="inner">
+              <div class="wizard-header">
+                <h3 class="heading">Connect Bank Account</h3>
+                <p>Please enter your infomation and proceed to the next step so we can build your accounts.</p>
+              </div>
+              <div class="form-row">
+                <div class="form-holder form-holder-1">
+                  <input type="text" name="find_bank" id="find_bank" placeholder="Find Your Bank" class="form-control"
+                    required>
+                </div>
+              </div>
+              <div class="form-row-total">
+                <div class="form-row">
+                  <div class="form-holder form-holder-2 form-holder-3">
+                    <input type="radio" class="radio" name="bank-1" id="bank-1" value="bank-1" checked>
+                    <label class="bank-images label-above bank-1-label" for="bank-1">
+                      <img src="images/form-v1-1.png" alt="bank-1">
+                    </label>
+                    <input type="radio" class="radio" name="bank-2" id="bank-2" value="bank-2">
+                    <label class="bank-images label-above bank-2-label" for="bank-2">
+                      <img src="images/form-v1-2.png" alt="bank-2">
+                    </label>
+                    <input type="radio" class="radio" name="bank-3" id="bank-3" value="bank-3">
+                    <label class="bank-images label-above bank-3-label" for="bank-3">
+                      <img src="images/form-v1-3.png" alt="bank-3">
+                    </label>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-holder form-holder-2 form-holder-3">
+                    <input type="radio" class="radio" name="bank-4" id="bank-4" value="bank-4">
+                    <label class="bank-images bank-4-label" for="bank-4">
+                      <img src="images/form-v1-4.png" alt="bank-4">
+                    </label>
+                    <input type="radio" class="radio" name="bank-5" id="bank-5" value="bank-5">
+                    <label class="bank-images bank-5-label" for="bank-5">
+                      <img src="images/form-v1-5.png" alt="bank-5">
+                    </label>
+                    <input type="radio" class="radio" name="bank-6" id="bank-6" value="bank-6">
+                    <label class="bank-images bank-6-label" for="bank-6">
+                      <img src="images/form-v1-6.png" alt="bank-6">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </mat-step>
+
+          <mat-step>
+            <div class="inner">
+              <div class="wizard-header">
+                <h3 class="heading">Set Financial Goals</h3>
+                <p>Please enter your infomation and proceed to the next step so we can build your accounts.</p>
+              </div>
+              <div class="form-row">
+                <div class="form-holder form-holder-2">
+                  <input type="radio" class="radio" name="radio1" id="plan-1" value="plan-1">
+                  <label class="plan-icon plan-1-label" for="plan-1">
+                    <img src="images/form-v1-icon-2.png" alt="pay-1">
+                  </label>
+                  <div class="plan-total">
+                    <span class="plan-title">Specific Plan</span>
+                    <p class="plan-text">Pellentesque nec nam aliquam sem et volutpat consequat mauris nunc congue nisi.
+                    </p>
+                  </div>
+                  <input type="radio" class="radio" name="radio1" id="plan-2" value="plan-2">
+                  <label class="plan-icon plan-2-label" for="plan-2">
+                    <img src="images/form-v1-icon-2.png" alt="pay-1">
+                  </label>
+                  <div class="plan-total">
+                    <span class="plan-title">Medium Plan</span>
+                    <p class="plan-text">Pellentesque nec nam aliquam sem et volutpat consequat mauris nunc congue nisi.
+                    </p>
+                  </div>
+                  <input type="radio" class="radio" name="radio1" id="plan-3" value="plan-3" checked>
+                  <label class="plan-icon plan-3-label" for="plan-3">
+                    <img src="images/form-v1-icon-3.png" alt="pay-2">
+                  </label>
+                  <div class="plan-total">
+                    <span class="plan-title">Special Plan</span>
+                    <p class="plan-text">Pellentesque nec nam aliquam sem et volutpat consequat mauris nunc congue nisi.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </mat-step>
+
+
+    </mat-stepper>
+  </div>
+</div>

@@ -7,28 +7,28 @@
         </h3>
       </div>
       <div class="card-body">
-        <form class="form" novalidate [formGroup]="authCredentialsDto" (ngSubmit)="userLogin()"  >
+        <form class="form" novalidate [formGroup]="loginForm" (ngSubmit)="signinUser()">
           <p>
             <mat-form-field appearance="fill" style="width: 100%">
               <mat-label>Email</mat-label>
-              <input formControlName="email" matInput id="email" name="email" type="text" required>
+              <input formControlName="email" matInput id="email" name="email" type="text" autofocus ngModel
+                pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z_]{2,3}$" required>
+
             </mat-form-field>
           </p>
           <p>
             <mat-form-field appearance="outline" style="width: 100%">
               <mat-label>Password</mat-label>
-              <input formControlName="password"
-                     matInput id="password"
-                     name="password" type="text" required>
+              <input formControlName="password" matInput id="password" name="password" type="text"
+                placeholder="Mot de passe" autocomplete="on" minlength="4" required ngModel>
               <button type="button" mat-icon-button matSuffix (click)="showPass = !showPass"
-                      [attr.aria-label]="'Hide password'">
+                [attr.aria-label]="'Hide password'">
                 <mat-icon>{{showPass ? 'visibility_off' : 'visibility'}}</mat-icon>
               </button>
             </mat-form-field>
           </p>
           <div class="row justify-content-end">
-            <button type="submit"(click)="authCredentialsDto.reset(); hide()"
-                    class="btn btn-outline-success pull-right float-right">
+            <button type="submit" class="btn btn-outline-success pull-right float-right">
               Login
             </button>
           </div>
@@ -44,8 +44,7 @@
       <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
       Invalid Credentials
     </h4>
-    <button type="button" (click)="hide()" class="close pull-right" aria-label="Close"
-    ><span aria-hidden="true">&times;</span></button>
+    <button type="button" class="close pull-right" aria-label="Close"><span aria-hidden="true">&times;</span></button>
   </div>
   <div class="modal-body text-center">
     <div class="alert alert-danger" role="alert">

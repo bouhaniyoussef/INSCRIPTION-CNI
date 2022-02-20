@@ -13,20 +13,19 @@
     </div>
 
     <div class="col-md-5 justify-content-end">
-      <mat-menu #connectionMenu="matMenu">
+      <mat-menu #connectionMenu="matMenu" >
 
-        <a *ngIf="!this.authService.isLoggedIn()"
-         mat-button routerLink="/auth/register"
+        <a *ngIf="_authenticationService.isNotAuthenticated"
+         mat-button routerLink="/register"
           routerLinkActive="active">Register <i class="far fa-user-circle"></i>
         </a>
         <br>
-        <a *ngIf="!this.authService.isLoggedIn()"
-        mat-button routerLink="/auth/login" routerLinkActive="active">Login
+        <a *ngIf="_authenticationService.isNotAuthenticated"
+        mat-button routerLink="/login" routerLinkActive="active">Login
           <i class="fas fa-sign-in-alt"></i> </a>
       </mat-menu>
       <a style="font-family: 'Anton', sans-serif" mat-button [matMenuTriggerFor]="connectionMenu"
-      ngIf="this.authService.isLoggedIn() && (this.authService.currentUser && this.authService.currentUser.isAdmin)"
-      >
+      *ngIf="_authenticationService.isNotAuthenticated"      >
         Connexion
       </a>
 
@@ -41,7 +40,7 @@
 
         <mat-menu #userMenu="matMenu">
           <a mat-menu-item routerLink="/profile" routerLinkActive="active">Profile</a>
-          <a mat-menu-item style="cursor: pointer;" (click)="authService.userLogout()">
+          <a mat-menu-item style="cursor: pointer;" >
             <i class="fa fa-sign-out-alt"></i>
             Logout
           </a>

@@ -8,14 +8,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilesModule } from './shared/files/files.module';
-import { HomeComponent } from './components/home/home.component';
-import { LoginComponent } from './components/auth/login/login.component';
-import { RegisterComponent } from './components/auth/register/register.component';
 import { AlertComponent } from './shared/alert/alert.component';
-import { ApplicationErrorComponent } from './shared/application-error/application-error.component';
-import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
-import { ResourceNotFoundComponent } from './shared/resource-not-found/resource-not-found.component';
-
 
 
 import {
@@ -28,19 +21,19 @@ import {
 } from "ngx-bootstrap";
 
 import { HttpClientModule } from '@angular/common/http';
+import { FormulaireComponent } from './components/formulaire/formulaire.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    LoginComponent,
-    RegisterComponent,
     AlertComponent,
-    ApplicationErrorComponent,
-    PageNotFoundComponent,
-    ResourceNotFoundComponent,
-    ContactComponent
+    ContactComponent,
+    FormulaireComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

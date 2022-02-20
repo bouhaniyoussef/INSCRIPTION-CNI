@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthService } from './services/auth/auth.service';
+import { UsersService } from './services/auth/users.service';
 
 @Component({
   selector: 'app-root',
@@ -8,14 +8,11 @@ import { AuthService } from './services/auth/auth.service';
 })
 export class AppComponent {
   title = 'INSCRIPTION-CNI';
-  constructor(public authService: AuthService) {
-    // authService.prepareUserData();
-    // authService.refreshInfo();
-}
+  constructor(public _authenticationService:UsersService) { }
 
-
-ngOnInit(): void {
-  // this.authService.refreshInfo();
-
-}
+  ngOnInit(): void {
+  }
+  logout() {
+    this._authenticationService.logout();
+  }
 }

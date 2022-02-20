@@ -1,4 +1,4 @@
-export interface Users {
+export interface User {
   _id: String;
   firstName:String,
   lastName:String,
@@ -8,5 +8,5 @@ export interface Users {
   city:String,
   country:String,
   email:String,
-  password:Number,
+  password:String,
   }

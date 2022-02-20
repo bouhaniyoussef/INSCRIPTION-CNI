@@ -13,15 +13,18 @@
         <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="home-tab">
           <h3 class="register-heading">Enter Profile Information</h3>
           <div class="row register-form">
-            <form [formGroup]="registerForm" (ngSubmit)="signupUser()" novalidate>
+            <form
+            [formGroup]="registerForm"
+            (ngSubmit)="signupUser()"
+            novalidate>
 
               <div class="d-flex justify-content-center mt-2">
                 <mat-form-field style="width: 300px;">
-                  <input id="firstname" formControlName="firstname" aria-label="First Name" type="text" matInput
+                  <input id="firstName" formControlName="firstName" aria-label="First Name" type="text" matInput
                     placeholder="First Name" required />
                 </mat-form-field>
                 <mat-form-field style="width: 300px;" class="ml-3">
-                  <input type="text" id="lastname" formControlName="lastname" matInput placeholder="Last Name"
+                  <input type="text" id="lastName" formControlName="lastName" matInput placeholder="Last Name"
                     aria-label="Last Name" required />
                 </mat-form-field>
               </div>
@@ -51,8 +54,8 @@
               </div>
               <div class="d-flex justify-content-center mt-2">
                 <mat-form-field style="width: 300px;">
-                  <input type="text" id="address" formControlName="address" matInput aria-label="Address"
-                    placeholder="Address" required />
+                  <input type="text" id="address"  matInput aria-label="Address"
+                    placeholder="Address"  />
                 </mat-form-field>
                 <mat-form-field style="width: 300px;" class="ml-3">
                   <input type="text" id="phone" formControlName="phone" matInput aria-label="Phone" placeholder="Phone"
@@ -60,7 +63,6 @@
                 </mat-form-field>
               </div>
 
-              <div formGroupName="authCredentialsDto">
                 <div class="d-flex justify-content-center mt-2">
                   <mat-form-field style="width: 300px;">
                     <input type="text" id="email" placeholder="Email" formControlName="email" matInput
@@ -71,7 +73,7 @@
                       placeholder="Password" required />
                   </mat-form-field>
                 </div>
-              </div>
+
               <button [disabled]="!registerForm.valid" class="btn btn-primary" type="submit">Register</button>
             </form>
           </div>

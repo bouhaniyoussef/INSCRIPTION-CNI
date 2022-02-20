@@ -1,7 +1,8 @@
+import { FormulaireComponent } from './components/formulaire/formulaire.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './components/auth/login/login.component';
-import { RegisterComponent } from './components/auth/register/register.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { ApplicationErrorComponent } from './shared/application-error/application-error.component';
@@ -14,31 +15,14 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
-
-
-  {
-    path: 'auth',
-    children: [
-      {
-        path: 'login',
-        component: LoginComponent
-      },
-      {
-        path: 'register',
-        component: RegisterComponent
-      }
-    ]
-  },
-  {
     path: 'contact',
     component: ContactComponent
   },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
 
-
+  {path: 'login', component: LoginComponent},
+  {path: 'register', component:RegisterComponent },
+  {path: 'form', component:FormulaireComponent },
 
   {path: "notFoundResource/:status", component: ResourceNotFoundComponent},
   {path: "applicationError/:status", component: ApplicationErrorComponent},
@@ -51,6 +35,13 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  declarations:[
+    HomeComponent,
+
+    PageNotFoundComponent,
+    ApplicationErrorComponent,
+    ResourceNotFoundComponent
+  ]
 })
 export class AppRoutingModule { }
