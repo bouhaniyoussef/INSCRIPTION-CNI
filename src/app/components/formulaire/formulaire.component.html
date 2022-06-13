@@ -41,24 +41,11 @@
             <div class="row register-form">
               <form [formGroup]="formulairForm" (ngSubmit)="formulaire()" novalidate>
                 <div class="d-flex justify-content-center mt-2">
-                  <mat-form-field style="width: 300px" class="ml-3">
-                    <input type="text" id="etab" formControlName="etab" matInput aria-label="Etablissement"
-                      placeholder="Etablissement" required />
-                  </mat-form-field>
-                  <mat-form-field style="width: 300px" class="ml-3">
-                    <input type="text" id="org" matInput aria-label="Organisme d'accueil"
-                      placeholder="Organisme d'accueil" required />
-                  </mat-form-field>
+
+
                 </div>
                 <div class="d-flex justify-content-center mt-2">
-                  <mat-form-field style="width: 300px" class="ml-3">
-                    <input type="text" id="sujet" formControlName="sujet" matInput aria-label="Sujet du stage"
-                      placeholder="Sujet du stage" required />
-                  </mat-form-field>
-                  <mat-form-field style="width: 300px" class="ml-3">
-                    <input type="zone" id="typstage" placeholder="Type du stage" formControlName="typstage" matInput
-                      aria-label="Type du stage" required />
-                  </mat-form-field>
+
                 </div>
 
 
@@ -77,36 +64,7 @@
             <h3>Enter Profile Information</h3>
             <div class="row register-form">
               <form [formGroup]="formulairForm" (ngSubmit)="formulaire()" novalidate>
-                <div class="d-flex justify-content-center mt-2">
-                  <mat-form-field style="width: 300px" class="ml-3">
-                    <input type="date" id="datedeb" formControlName="datedeb" matInput aria-label="Péride du stage du "
-                      placeholder="Péride du stage du " required />
-                  </mat-form-field>
-                  <mat-form-field style="width: 300px" class="ml-3">
-                    <input type="date" id="datefin" formControlName="datefin" matInput aria-label="Au" placeholder="Au"
-                      required />
-                  </mat-form-field>
 
-
-
-                </div>
-                <div class="d-flex justify-content-center mt-2">
-                  <mat-form-field style="width: 300px" class="ml-3">
-                    <input type="date" id="datefin" formControlName="datefin" matInput aria-label="Au" placeholder="Au"
-                    required />
-                  </mat-form-field>
-                  <mat-form-field style="width: 300px" class="ml-3">
-                    <input type="date" id="datefin" formControlName="datefin" matInput aria-label="Au" placeholder="Au"
-                    required />
-                  </mat-form-field>
-                </div>
-                <div class="d-flex justify-content-center mt-2">
-                    <mat-checkbox  style="width: 10px" class="example-disabled-checkbox  ml-3" [(ngModel)]="pay">Non</mat-checkbox>
-                </div>
-                    <div class="d-flex justify-content-right mt-2">
-
-                  <mat-checkbox style="width: 10px" class="example-disabled-checkbox  ml-3" [(ngModel)]="pay">Oui</mat-checkbox>
-                </div>
                 <div class="d-flex justify-content-center mt-3">
                 <button [disabled]="!formulairForm.valid" style="width: 100px" p-3 class="ml-lg-3" class="btn btn-primary btnform" type="submit">
                   Register
@@ -122,14 +80,11 @@
 </div>
 </div> -->
 
-<div class="page-content">
-  <div class="form-v1-content">
-    <mat-stepper class="wizard-form">
-
-
+<!-- <div class="page-content">
+  <div class="form-v1-content"> -->
+    <!-- <mat-stepper class="wizard-form"> -->
           <!-- SECTION 1 -->
-
-          <mat-step>
+          <!-- <mat-step>
             <div class="inner">
               <div class="wizard-header">
                 <h3 class="heading">Peronal Infomation</h3>
@@ -156,24 +111,20 @@
                   </mat-form-field>
 
                 </div>
-                <!-- <div class="form-holder">
+                <div class="form-holder">
                   <mat-form-field>
                     <input type="number" id="tel" aria-label="Tél" formControlName="tel" matInput placeholder="Tél"
                     required />
                   </mat-form-field>
-                </div> -->
+                </div>
               </div>
 
 
 
             </div>
-          </mat-step>
+          </mat-step> -->
           <!-- SECTION 2 -->
-          <h2>
-            <p class="step-icon"><span>02</span></p>
-            <span class="step-text">Connect Bank Account</span>
-          </h2>
-          <mat-step>
+          <!-- <mat-step>
             <div class="inner">
               <div class="wizard-header">
                 <h3 class="heading">Connect Bank Account</h3>
@@ -220,9 +171,9 @@
                 </div>
               </div>
             </div>
-          </mat-step>
-
-          <mat-step>
+          </mat-step> --><!-- SECTION 1 -->
+          <!-- SECTION 3 -->
+          <!-- <mat-step>
             <div class="inner">
               <div class="wizard-header">
                 <h3 class="heading">Set Financial Goals</h3>
@@ -260,9 +211,286 @@
                 </div>
               </div>
             </div>
-          </mat-step>
+          </mat-step> -->
+    <!-- </mat-stepper> -->
+
+    <!-- <div fxLayout="row" fxLayoutWrap="wrap">
+      <div fxFlex.gt-sm="100%" fxFlex="100">
+        <mat-card>
+          <mat-card-content>
+            <mat-card-title>Stepper</mat-card-title>
+            <mat-card-subtitle>Check the <code class=""><a href="https://material.angular.io/components/stepper/overview">Official Component</a></code></mat-card-subtitle>
+            <button mat-raised-button (click)="isLinear = true" id="toggle-linear">Enable linear mode</button>
+            <mat-horizontal-stepper [linear]="isLinear">
+              <mat-step [stepControl]="firstFormGroup">
+                <form [formGroup]="firstFormGroup">
+                  <ng-template matStepLabel>Fill out your name</ng-template>
+                  <mat-form-field>
+                    <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                  </mat-form-field>
+                  <div>
+                    <button mat-raised-button color="warn" matStepperNext>Next</button>
+                  </div>
+                </form>
+              </mat-step>
+              <mat-step [stepControl]="secondFormGroup">
+                <form [formGroup]="secondFormGroup">
+                  <ng-template matStepLabel>Fill out your address</ng-template>
+                  <mat-form-field>
+                    <input matInput placeholder="Address" formControlName="secondCtrl" required>
+                  </mat-form-field>
+                  <div>
+                    <button mat-raised-button color="accent" matStepperPrevious>Back</button>
+                    <button mat-raised-button color="warn" matStepperNext>Next</button>
+                  </div>
+                </form>
+              </mat-step>
+              <mat-step>
+                <ng-template matStepLabel>Done</ng-template>
+                You are now done.
+                <div>
+                  <button mat-raised-button color="accent" matStepperPrevious>Back</button>
+                </div>
+              </mat-step>
+            </mat-horizontal-stepper>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div> -->
+
+    <!-- ============================================================== -->
+    <!-- row -->
+    <!-- ============================================================== -->
+    <!-- <div fxLayout="row" fxLayoutWrap="wrap">
+
+      <div fxFlex.gt-sm="100%" fxFlex="100">
+
+            <mat-stepper linear #stepper>
+              <mat-step [stepControl]="varientfirstFormGroup" [editable]="isEditable">
+                <form [formGroup]="varientfirstFormGroup">
+                  <h3>Enter Profile Information</h3>
+                  <div>
+
+                    <mat-form-field style="width: 300px" class="ml-3">
+                      <input matInput placeholder="Nom et Prénom" formControlName="varientfirstCtrl" required>
+                    </mat-form-field>
+                    <mat-form-field style="width: 300px" class="ml-3">
+                      <input matInput placeholder="CIN" formControlName="varientfirstCtrl" required>
+                    </mat-form-field>
+                  </div>
+                  <div>
+
+                    <mat-form-field style="width: 300px" class="ml-3">
+                      <input matInput placeholder="Niveau d'Etude'" formControlName="varientfirstCtrl" required>
+                    </mat-form-field>
+                    <mat-form-field style="width: 300px" class="ml-3">
+                      <input matInput placeholder="Tel" formControlName="varientfirstCtrl" required>
+                    </mat-form-field>
+                  </div>
+                  <mat-form-field style="width: 300px" class="ml-3">
+                    <input type="date" matInput placeholder="Date de naissance" formControlName="dateFormGroup" required>
+                  </mat-form-field>
+                  <div>
+                    <button mat-raised-button matStepperNext color="accent">Next</button>
+                  </div>
+                </form>
+              </mat-step>
+              <mat-step [stepControl]="varientsecondFormGroup">
+                <form [formGroup]="varientsecondFormGroup">
+                  <h3>Enter Profile Information</h3>
+                  <div>
+                    <mat-form-field style="width: 300px" class="ml-3">
+                      <input type="text" id="etab" formControlName="etab" matInput aria-label="Etablissement"
+                        placeholder="Etablissement" required />
+                    </mat-form-field>
+                    <mat-form-field style="width: 300px" class="ml-3">
+                      <input type="text" id="org" matInput aria-label="Organisme d'accueil"
+                        placeholder="Organisme d'accueil" required />
+                    </mat-form-field>
+                  </div>
+                  <div>
+                    <mat-form-field style="width: 300px" class="ml-3">
+                      <textarea type="text" id="sujet" formControlName="sujet" matInput aria-label="Sujet du stage"
+                        placeholder="Sujet du stage" required></textarea>
+                    </mat-form-field>
+                    <mat-form-field style="width: 300px" class="ml-3">
+                      <input type="zone" id="typstage" placeholder="Type du stage" formControlName="typstage" matInput
+                        aria-label="Type du stage" required />
+                    </mat-form-field>
+                  </div>
+                  <div>
+                    <button mat-raised-button color="primary" matStepperPrevious>Back</button>
+                    <button mat-raised-button color="accent" matStepperNext>Next</button>
+                  </div>
+                </form>
+              </mat-step>
+              <mat-step [stepControl]="varientthirdFormGroup" [editable]="isEditable">
+                <form [formGroup]="varientsecondFormGroup">
+                <div>
+                  <mat-form-field style="width: 300px" class="ml-3">
+                    <input type="date" id="datedeb" formControlName="datedeb" matInput aria-label="Péride du stage du "
+                      placeholder="Péride du stage du " required />
+                  </mat-form-field>
+                  <mat-form-field style="width: 300px" class="ml-3">
+                    <input type="date" id="datefin" formControlName="datefin" matInput aria-label="Au" placeholder="Au"
+                      required />
+                  </mat-form-field>
+                </div>
+                <div>
+                  <mat-form-field style="width: 300px" class="ml-3">
+                    <input type="date" id="datefin" formControlName="datefin" matInput aria-label="Au" placeholder="Au"
+                    required />
+                  </mat-form-field>
+                  <mat-form-field style="width: 300px" class="ml-3">
+                    <input type="date" id="datefin" formControlName="datefin" matInput aria-label="Au" placeholder="Au"
+                    required />
+                  </mat-form-field>
+                </div>
+                <section class="example-section">
+                  <mat-checkbox class="example-margin" [(ngModel)]="checked">NON</mat-checkbox>
+                  <mat-checkbox class="example-margin" [(ngModel)]="indeterminate">OUI</mat-checkbox>
+                </section>
+                <div class="button-row">
+                  <button mat-raised-button color="primary" matStepperPrevious>Back</button>
+                  <button mat-raised-button color="warn" >Reset</button>
+                </div>
+              </form>
+              </mat-step>
+            </mat-stepper>
+      </div>
+    </div> -->
 
 
-    </mat-stepper>
+  <!-- </div>
+</div> -->
+
+
+
+
+<div class="row">
+  <div class="col-md-12 col-md-offset-3">
+      <form [formGroup]="personalDetails" id="msform">
+          <!-- progressbar -->
+          <ul id="progressbar">
+              <li [ngClass]="step>=1 ? 'active ' : 'inactive'">Personal Details</li>
+              <li [ngClass]="step>=2 ? 'active' : 'inactive'">Social Profiles</li>
+              <li [ngClass]="step==3 ? 'active' : 'inactive'">Account Setup</li>
+              <!-- <li [ngClass]="step==4 ? 'active' : 'inactive'">Account Setup</li> -->
+          </ul>
+          <!-- fieldsets -->
+
+          <fieldset  *ngIf="step == 1" >
+            <h2 class="fs-title">Personal Details</h2>
+            <div class="row">
+
+
+              <div class="col-md-6">
+
+
+                  <input type="text" formControlName="name"  [ngClass]="{ 'is-invalid': personal_step && personal.name.errors }" placeholder="Full Name"/>
+                  <div *ngIf="personal_step && personalDetails.controls.name.errors">
+                    <div *ngIf="personal.name.errors?.required">Name is required</div>
+                  </div>
+
+                </div>
+                <div class="col-md-6">
+
+                  <input type="number" formControlName="cin" name="cin" placeholder="CIN"/>
+                  <div *ngIf="personal_step && personalDetails.controls.cin.errors">
+                    <div *ngIf="personal.cin.errors?.required">CIN is required</div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+
+                  <input type="date" formControlName="datenais" name="datenais" placeholder="DATE DE NAISSANCE"/>
+                  <div *ngIf="personal_step && personalDetails.controls.datenais.errors">
+                    <div *ngIf="personal.datenais.errors?.required">DATE DE NAISSANCE is required</div>
+                  </div>
+                </div>
+
+              <div class="col-md-6">
+
+                <input type="number" formControlName="tel" name="tel" placeholder="Tél"/>
+                <div *ngIf="personal_step && personalDetails.controls.tel.errors">
+                  <div *ngIf="personal.tel.errors?.required">Tél is required</div>
+                </div>
+              </div>
+              <div class="col-md-12">
+
+                <input type="text" formControlName="niv" name="niv" placeholder="Niveau d'etude"/>
+                <div *ngIf="personal_step && personalDetails.controls.niv.errors">
+                  <div *ngIf="personal.niv.errors?.required">Niveau d'etude is required</div>
+                </div>
+              </div>
+                <input (click)="next()" type="button" name="next" class="next action-button" value="Next"/>
+              </div>
+          </fieldset>
+      </form>
+      <form [formGroup]="addressDetails" id="msform">
+          <fieldset *ngIf="step == 2" >
+              <h2 class="fs-title">Address Details</h2>
+
+              <input type="text" formControlName="etab"  placeholder="Etablissement"/>
+              <div *ngIf="address_step && addressDetails.controls.etab.errors">
+                  <div *ngIf="address.etab.errors?.required">Etablissement is required</div>
+              </div>
+
+              <input type="text" formControlName="org"  placeholder="Organisme"/>
+              <div *ngIf="address_step && addressDetails.controls.org.errors">
+                  <div *ngIf="address.org.errors?.required">Organisme is required</div>
+              </div>
+
+
+              <input type="text" formControlName="typstage"  placeholder="Type du stage"/>
+              <div *ngIf="address_step && addressDetails.controls.typstage.errors">
+                <div *ngIf="address.typstage.errors?.required">Type du stage is required</div>
+              </div>
+
+              <textarea rows="5" cols="5" formControlName="sujet"  placeholder="Sujet du stage"></textarea>
+              <div *ngIf="address_step && addressDetails.controls.sujet.errors">
+                  <div *ngIf="address.sujet.errors?.required">Sujet du stage is required</div>
+              </div>
+
+              <input (click)="previous()" type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+              <input  (click)="next()" type="button" name="next" class="next action-button" value="Next"/>
+          </fieldset>
+      </form>
+      <form [formGroup]="addressDetails" id="msform">
+          <fieldset *ngIf="step == 3">
+            <div class="row">
+
+              <h2 class="fs-title">Educational Details</h2>
+              <input type="date" formControlName="datedeb" placeholder="Date de debut"/>
+              <div *ngIf="education_step && educationalDetails.controls.datedeb.errors">
+                <div *ngIf="education.datedeb.errors?.required">Date de debut is required</div>
+              </div>
+              <input type="date" formControlName="datefin"  placeholder="Date de fin"/>
+              <div *ngIf="education_step && educationalDetails.controls.datefin.errors">
+                  <div *ngIf="education.datefin.errors?.required">Date de fin is required</div>
+              </div>
+              <div class="col-md-6">
+
+                <div class="col-md-2">
+
+                  <input type="checkbox" formControlName="pay">OUI
+                  <div *ngIf="education_step && educationalDetails.controls.pay.errors">
+                    <div *ngIf="education.pay.errors?.required">Pays is required</div>
+                  </div>
+                </div>
+                <div class="col-md-2">
+
+                  <input type="checkbox" formControlName="pay">Non
+                  <div *ngIf="education_step && educationalDetails.controls.pay.errors">
+                    <div *ngIf="education.pay.errors?.required">Pays is required</div>
+                  </div>
+                </div>
+              </div>
+              <input (click)="previous()" type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+              <input (click)="submit()"type="submit" name="submit" class="submit action-button" value="Submit"/>
+            </div>
+          </fieldset>
+      </form>
+
   </div>
 </div>
+
